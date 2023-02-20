@@ -25,6 +25,11 @@ Comentarios:
   Agregar test.
   Se puede mejorar el codigo para que sea mas escalable dada la supuesta implementacion en un sistema bancario.
   Agregar validaciones con respecto a el monto de las cuentas 
+  Estandarizar una nomenclatura para los archivos asi no se ve un espanglish
+  Refactorizar codigo , reducir la complejidad mejorar la legibilidad y la mantenibilidad del código al separar las responsabilidades en funciones más pequeñas
+  Agregar inspect a la api para poder debbugear mas facil 
+  Agregar logs en la api para saber hasta que instancia llego 
+  Agregar swagger 
   
   En resumen : 
  
