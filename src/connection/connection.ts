@@ -21,9 +21,10 @@ export class Repository {
                 username: process.env.ARQ_DB_USER,
                 password: process.env.ARQ_DB_PASSWORD,
                 database: process.env.ARQ_DB_NAME,
+                secretKey: process.env.SECRET_KEY,
                 entities: [Cuenta,Divisa,TransaccionesHistorico,Usuario],
                 synchronize: false,
-                logging: true
+                logging: true,
             }
             Repository.connection = await createConnection(options);
         }

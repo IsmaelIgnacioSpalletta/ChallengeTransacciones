@@ -16,7 +16,7 @@ export class TransaccionesHistorico {
     @Column({ name: "monto" })
     public monto!: number;
 
-    @ManyToOne(() => Cuenta, cuenta => cuenta.id )
+    @ManyToOne(() => Cuenta, cuenta => cuenta.id) 
     public cuentaDestino?: Cuenta[];
 
     @ManyToOne(() => Cuenta, cuenta => cuenta.id )

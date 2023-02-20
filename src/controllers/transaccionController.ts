@@ -1,20 +1,16 @@
 import { DELETE, GET, POST, PUT, route } from "awilix-express";
 import { Response, Request } from "express";
-import { NotFoundEntityError } from "../errors/notFoundEntityError";
 import { ValidationError } from "../errors/validationError";
 import { BaseController } from "./baseController";
 import { TransaccionResponseDto } from './dto/transaccionResponseDto';
 import { TransaccionService } from '../services/transaccionService';
 import { TransaccionRequestDto } from './dto/transaccionRequestDto';
-import { Repository } from '../connection/connection';
 
 
 export class TransaccionController extends BaseController {
 
     private statusInternalServerError = '500';
     private badRequestError = '400';
-    private notFoundError = '404';
-
 
     constructor (private readonly transaccionService: TransaccionService) {
         super();
@@ -23,7 +19,8 @@ export class TransaccionController extends BaseController {
     @GET()
     public getTransacciones = async (req: Request, res: Response) => {
         try {
-            const report = await this.transaccionService.getTransaccion();
+            
+            const report = await this.transaccionService.getTransaccion(req.body);
             this.sendSuccess(res, report);
         } catch (e: any) {
             console.log(e);
@@ -45,3 +42,4 @@ export class TransaccionController extends BaseController {
         }
     }
 }
+

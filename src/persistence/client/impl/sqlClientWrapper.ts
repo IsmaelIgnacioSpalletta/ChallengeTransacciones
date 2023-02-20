@@ -7,10 +7,10 @@ export class SqlClientWrapper implements SqlClient {
 
     constructor (entity: string) { this.entity = entity}
 
-    public findAll = async () => {
+    public findAll = async (body?:object) => {
         const entityRepository = await Repository.getRepository(this.entity);
         let query = entityRepository.createQueryBuilder(this.entity);
-        query = QueryBuilder.buildQuery(this.entity, query);
+        query = QueryBuilder.buildQuery(this.entity, query, body);
         return await query.getMany();
     }
 

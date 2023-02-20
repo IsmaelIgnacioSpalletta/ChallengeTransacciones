@@ -17,11 +17,11 @@ export class Cuenta {
 
     @OneToMany(() => TransaccionesHistorico, transaccion => transaccion.cuentaOrigen)
     @JoinColumn({name: 'cuentaOrigenId', referencedColumnName: 'id'})
-    public transaccionOrigen?: TransaccionesHistorico;
+    public transaccionOrigen?: TransaccionesHistorico[];
 
     @OneToMany(() => TransaccionesHistorico, transaccion => transaccion.cuentaDestino)
     @JoinColumn({name: 'cuentaDestinoId', referencedColumnName: 'id'})
-    public transaccionDestino?: TransaccionesHistorico;
+    public transaccionDestino?: TransaccionesHistorico[];
 
     @ManyToMany(() => Usuario, usuario => usuario.cuentas)
     @JoinTable({ name: 'usuario_cuenta' ,
