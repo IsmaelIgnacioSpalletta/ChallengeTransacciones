@@ -11,7 +11,7 @@ export ARQ_DB_HOST=localhost
 export ARQ_DB_TYPE=mariadb
 
 token jwt = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJub21icmUiOiJJc21hZWwgU3BhbGxldHRhIn0.VO_dxVmlwftz4K_jpMqKAdo8UYbCt-P0sZP9gZIWnDE
-
+key apiFixer = ssYPCoc1mLjLm7OMJVpl7ULNouWGaDIH
  agregue achivo dump para la base en el repo, con este comando lo clonas = mysqldump -u root -p CHALLENGE_TECNICO_TRANSACCIONES  < dumpTransacciones.sql
 
 Comentarios:
