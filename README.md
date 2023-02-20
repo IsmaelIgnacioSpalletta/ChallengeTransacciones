@@ -12,6 +12,8 @@ export ARQ_DB_TYPE=mariadb
 
 token jwt = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJub21icmUiOiJJc21hZWwgU3BhbGxldHRhIn0.VO_dxVmlwftz4K_jpMqKAdo8UYbCt-P0sZP9gZIWnDE
 
+ agregue achivo dump para la base en el repo, con este comando lo clonas = mysqldump -u root -p CHALLENGE_TECNICO_TRANSACCIONES  < dumpTransacciones.sql
+
 Comentarios:
   Dada la forma en que implemente las relacion de cada entidad a la hora de filtrar por fechas obtengo incongruencias si bien a nivel codigo agregue los    filtros a la hora de utilizarlos no genera correctamente los datos a la hora de obtener el reporte de porcentajes. Esto anterior tambien lo puedo consederar una limitacion
   
